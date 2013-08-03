@@ -1,0 +1,66 @@
+# puts current dir in iterm2 tab
+export PROMPT_COMMAND='echo -ne "\033]0;${PWD/#$HOME/~}\007"'
+
+#don't know what this is
+export PATH="/Applications/microchip/xc8/v1.11/bin":$PATH
+
+#mine:
+#android
+export PATH=${PATH}:/Users/mark/Stuff/Android/android-sdk-macosx/platform-tools 
+
+#listing files
+alias l="ls -lG"
+alias lt="ls -ltG"
+alias la="ls -laG"
+alias lr="ls -lRG"
+
+#quickly edit bash profile and bashrc
+alias editprofile="vim ~/.bash_profile"
+alias editrc="vim ~/.bashrc"
+alias viewprofile="less ~/.bash_profile"
+alias viewrc="less ~/.bashrc"
+
+#moving around
+alias cdd="cd ~/Desktop"
+alias cddd="cd ~/Deskdrawer"
+alias cddb="cd ~/Dropbox"
+alias cdsite="cd ~/Stuff/Programming/markmossberg"
+alias ..="pwd; cd ..; pwd; ls -lG"
+alias cdprog="cd /Users/mark/Stuff/Programming"
+alias cdschool="cd /Users/mark/Dropbox/Northeastern/2nd_Semester"
+alias cdresume="cd ~/Stuff/Professional"
+alias cdcrew="cd ~/Stuff/Programming/Crew/website"
+
+#misc
+alias cl="clear; pwd; ls -lG"
+alias mv="mv -v" 
+alias jkl="ls -l /Volumes" # quickly tell me if i have external drives attached alias finder="open -R ."
+alias copy="tr -d \"\\n\" | pbcopy"
+alias clearlogs="sudo rm -v /private/var/log/asl/*.asl"
+alias stfu="osascript -e 'set volume output muted true'" #pure greatness from @nixpulvis
+alias cpu="sudo htop"
+alias scoop="mv ~/Desktop/* ~/Deskdrawer" # scoops everything from my ~/desktop into my ~/deskdrawer
+alias unscoop="mv ~/Deskdrawer/* ~/Desktop" # unscoops everything from the ~/deskdrawer to the ~/desktop (usually temporarily)"
+alias filetree="ls -R | grep ":$" | sed -e 's/:$//' -e 's/[^-][^\/]*\//--/g' -e 's/^/ /' -e 's/-/|/'"
+alias rmd="rm -rf"
+alias public="curl http://canihazip.com/s/"
+alias burp="networksetup -setwebproxystate Airport on; networksetup -setsecurewebproxystate Airport on; open /Users/mark/Stuff/Software/Programs/burpsuite_free_v1.5.jar"
+alias burpoff="networksetup -setwebproxystate Airport off; networksetup -setsecurewebproxystate Airport off"
+alias netw="networksetup"
+
+#ssh
+alias sshccs="ssh markmoss@login.ccs.neu.edu"
+alias sshcoe="ssh mmossber@gateway.coe.neu.edu"
+alias sshsite="ssh -p 2222 markmoss@mark.mn"
+
+#compile
+alias C="gcc -o"
+alias CPP="g++ -o"
+
+#function
+function go(){ # navigates to directory, clears screen
+  cd "$1"
+  clear
+  pwd
+  ls -l
+}

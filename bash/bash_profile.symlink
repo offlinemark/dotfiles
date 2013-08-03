@@ -1,0 +1,70 @@
+### dumb path stuff #########################################
+
+# Setting PATH for MacPython 2.6
+# The orginal version is saved in .bash_profile.pysave
+#PATH="/Library/Frameworks/Python.framework/Versions/2.6/bin:${PATH}"
+#export PATH
+
+# Setting PATH for Python 2.7
+# The orginal version is saved in .bash_profile.pysave
+PATH="/Library/Frameworks/Python.framework/Versions/2.7/bin:${PATH}"
+export PATH
+
+# Setting PATH for Python 3.3
+# The orginal version is saved in .bash_profile.pysave
+PATH="/Library/Frameworks/Python.framework/Versions/3.3/bin:${PATH}"
+export PATH
+
+#ruby
+export PATH="$HOME/.rbenv/shims:$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
+
+#export PATH="/Applications/microchip/xc8/v1.11/bin":$PATH
+
+export PATH="$HOME/Stuff/Programming/my_bin":$PATH
+
+### prompt stuff #########################################
+
+# Colors
+black='\e[0;30m' # Black - Regular
+red='\e[0;31m' # Red
+green='\e[0;32m' # Green
+blue='\e[0;34m' # Blue
+purple='\e[0;35m' # Purple
+cyan='\e[0;36m' # Cyan
+white='\e[0;37m' # White
+bblack='\e[1;30m' # Black - Bold
+bred='\e[1;31m' # Red
+bgreen='\e[1;32m' # Green
+bblue='\e[1;34m' # Blue
+bpurple='\e[1;35m' # Purple
+bcyan='\e[1;36m' # Cyan
+bwhite='\e[1;37m' # White
+
+reset='\e[0m'    # Text Reset
+
+#bash prompt
+#export PS1="[\h:\u//\W]{ "
+#export PS1="[\w]{ "
+#export PS1="\e[1;32m\][\w]{\[\e[0m\] " # [~/Desktop]{
+#export PS1="\e[1;32m\][\u:\w]{\[\e[0m\] " # [mark:~/Desktop]{
+#PS1='\[\e[1;32m\][\u@\h \W]\$\[\e[0m\] ' # [mark@Mothership Desktop]$
+#PS1='\[\e[1;32m\][\u@\h \W]\$\[\e[0m\] '
+
+# megatron
+
+function parse_git_branch { 
+   git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/' 
+} 
+export PS1="\[$bgreen\][\u:\[$bcyan\]\w\[$bgreen\]]\[$bblue\]\$(parse_git_branch)\[$bgreen\]{ \[$reset\]"
+
+export CLICOLOR=1
+
+#export LSCOLORS=GxFxCxDxBxegedabagaced
+export LSCOLORS=Gxfxcxdxbxegedabagacad
+
+source ~/.bashrc
+

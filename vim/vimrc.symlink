@@ -1,4 +1,30 @@
+"
+" @holman dotfiles default
+"
+
 syntax on
 
 " Wrap gitcommit file types at the appropriate length
 filetype indent plugin on
+
+""""""""""""""""""
+
+"
+" mine
+"
+
+execute pathogen#infect()
+
+syntax on
+
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+set autoindent
+
+set number
+
+highlight ExtraWhitespace ctermbg=darkgreen guibg=darkgreen
+match ExtraWhitespace /\s\+$/
+
+"set ruler
