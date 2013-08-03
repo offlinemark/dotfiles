@@ -1,0 +1,21 @@
+[user]
+	name = Mark Mossberg
+	email = mark.mossberg@gmail.com
+[credential]
+	helper = osxkeychain
+[color]
+	ui = true
+[push]
+	default = simple
+[core]
+	editor = /usr/bin/vim
+	excludes = ~/.gitignore
+[alias]
+  s = "status -s"
+  a = "add"
+  c = "commit"
+  l = "log"
+  ll = "log --graph --oneline"
+  p = "push"
+  co = "checkout"
+  b = "branch"
