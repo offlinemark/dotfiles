@@ -3,7 +3,7 @@ export PROMPT_COMMAND='echo -ne "\033]0;${PWD/#$HOME/~}\007"'
 
 #mine:
 #android
-export PATH=${PATH}:/Users/mark/android/android-sdk-macosx/platform-tools 
+export PATH=${PATH}:/Users/mark/code/android/android-sdk-macosx/platform-tools 
 
 #listing files
 alias l="ls -lG"
