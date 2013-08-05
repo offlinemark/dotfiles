@@ -1,12 +1,9 @@
 # puts current dir in iterm2 tab
 export PROMPT_COMMAND='echo -ne "\033]0;${PWD/#$HOME/~}\007"'
 
-#don't know what this is
-export PATH="/Applications/microchip/xc8/v1.11/bin":$PATH
-
 #mine:
 #android
-export PATH=${PATH}:/Users/mark/Stuff/Android/android-sdk-macosx/platform-tools 
+export PATH=${PATH}:/Users/mark/android/android-sdk-macosx/platform-tools 
 
 #listing files
 alias l="ls -lG"
@@ -24,12 +21,12 @@ alias viewrc="less ~/.bashrc"
 alias cdd="cd ~/Desktop"
 alias cddd="cd ~/Deskdrawer"
 alias cddb="cd ~/Dropbox"
-alias cdsite="cd ~/Stuff/Programming/markmossberg"
+alias cdsite="cd ~/code/markmossberg"
 alias ..="pwd; cd ..; pwd; ls -lG"
-alias cdprog="cd /Users/mark/Stuff/Programming"
+alias cdcode="cd /Users/mark/code"
 alias cdschool="cd /Users/mark/Dropbox/Northeastern/2nd_Semester"
-alias cdresume="cd ~/Stuff/Professional"
-alias cdcrew="cd ~/Stuff/Programming/Crew/website"
+alias cdresume="cd ~/professional"
+alias cdcrew="cd ~/code/crew/website"
 
 #misc
 alias cl="clear; pwd; ls -lG"
