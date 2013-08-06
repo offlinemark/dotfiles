@@ -12,6 +12,7 @@
 	excludes = ~/.gitignore
 [alias]
   s = "status -s"
+  st = "status"
   a = "add"
   c = "commit"
   l = "log"
