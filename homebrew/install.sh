@@ -14,6 +14,11 @@ then
 fi
 
 # Install homebrew packages
-brew install grc coreutils spark
+brew install git
+brew install htop
+brew install irssi
+brew install nmap
+brew install tmux
+brew install valgrind
 
 exit 0
