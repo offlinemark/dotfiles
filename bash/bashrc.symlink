@@ -1,10 +1,6 @@
 # puts current dir in iterm2 tab
 export PROMPT_COMMAND='echo -ne "\033]0;${PWD/#$HOME/~}\007"'
 
-#mine:
-#android
-export PATH=${PATH}:/Users/mark/code/android/android-sdk-macosx/platform-tools 
-
 #listing files
 alias l="ls -lG"
 alias lt="ls -ltG"
@@ -44,6 +40,9 @@ alias public="curl http://canihazip.com/s/"
 alias burp="networksetup -setwebproxystate Airport on; networksetup -setsecurewebproxystate Airport on; open /Users/mark/Stuff/Software/Programs/burpsuite_free_v1.5.jar"
 alias burpoff="networksetup -setwebproxystate Airport off; networksetup -setsecurewebproxystate Airport off"
 alias netw="networksetup"
+alias getserved="sudo apachectl start"
+alias stopserved="sudo apachectl stop"
+alias restartserved="sudo apachectl restart"
 
 #ssh
 alias sshccs="ssh markmoss@login.ccs.neu.edu"
