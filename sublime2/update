@@ -1,0 +1,9 @@
+#!/bin/sh
+# Since Sublime is fucking insane and can't handle symlinks for the User
+# directory, we'll need to manually copy stuff over.
+
+#rm -rf $ZSH/sublime2/User
+#cp -vR ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/User/ ~/.dotfiles/sublime2/User 
+
+
+# I ACTUALLY DON'T THINK THIS SCRIPT IS NECESSARY BUT IM KEEPING IT AROUND
