@@ -9,7 +9,7 @@
 	default = simple
 [core]
 	editor = /usr/bin/vim
-	excludes = ~/.gitignore
+	excludesfile = /Users/mark/.gitignore
 [alias]
   s = "status -s"
   st = "status"
