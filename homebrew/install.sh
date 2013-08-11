@@ -13,6 +13,12 @@ then
   exit
 fi
 
+# make sure homebrew is up to date
+brew update
+
+# make sure everything is up to date
+brew upgrade
+
 # Install homebrew packages
 brew install git
 brew install htop

@@ -23,6 +23,7 @@ alias cdcode="cd /Users/mark/code"
 alias cdschool="cd /Users/mark/Dropbox/Northeastern/2nd_Semester"
 alias cdresume="cd ~/professional"
 alias cdcrew="cd ~/code/crew/website"
+alias cddot="cd ~/.dotfiles"
 
 #misc
 alias cl="clear; pwd; ls -lG"
