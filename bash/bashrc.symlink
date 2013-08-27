@@ -41,8 +41,8 @@ alias public="curl http://canihazip.com/s/"
 alias burp="sudo networksetup -setwebproxystate Wi-Fi on; sudo networksetup -setsecurewebproxystate Wi-Fi on; burpsuite"
 alias burpoff="sudo networksetup -setwebproxystate Wi-Fi off; sudo networksetup -setsecurewebproxystate Wi-Fi off"
 alias netw="networksetup"
-alias getserved="sudo apachectl start"
-alias stopserved="sudo apachectl stop"
+alias apache="sudo apachectl start"
+alias apacheoff="sudo apachectl stop"
 alias restartserved="sudo apachectl restart"
 
 #ssh
