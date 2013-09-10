@@ -23,6 +23,7 @@ set softtabstop=4
 set autoindent
 
 set number
+set ruler
 
 highlight ExtraWhitespace ctermbg=darkgreen guibg=darkgreen
 match ExtraWhitespace /\s\+$/
@@ -37,5 +38,3 @@ function! NumberToggle()
 endfunc
 
 nnoremap <C-n> :call NumberToggle()<cr>
-
-"set ruler
