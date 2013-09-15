@@ -11,12 +11,12 @@
 	editor = /usr/bin/vim
 	excludesfile = /Users/mark/.gitignore
 [alias]
-  s = "status -s"
-  st = "status"
-  a = "add"
-  c = "commit"
-  l = "log"
-  ll = "log --graph --oneline"
-  p = "push"
-  co = "checkout"
-  b = "branch"
+	s = "status -s"
+	st = "status"
+	a = "add"
+	c = "commit"
+	l = "log"
+	ll = "log --graph --oneline --all --decorate"
+	p = "push"
+	co = "checkout"
+	b = "branch"
