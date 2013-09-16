@@ -16,20 +16,17 @@ alias viewrc="less ~/.bashrc"
 #moving around
 alias cdd="cd ~/Desktop"
 alias cddd="cd ~/Deskdrawer"
-alias cddb="cd ~/Dropbox"
 alias ..="pwd; cd ..; pwd; ls -lG"
 alias cdcode="cd ~/code"
-alias cdschool="cd ~/northeastern"
+alias cdschool="cd ~/northeastern/2_1"
 alias cddot="cd ~/.dotfiles"
 
 #misc
 alias cl="clear; pwd; ls -lG"
 alias mv="mv -v" 
-alias jkl="ls -l /Volumes" # quickly tell me if i have external drives attached alias finder="open -R ."
 alias copy="tr -d \"\\n\" | pbcopy"
 alias clearlogs="sudo rm -v /private/var/log/asl/*.asl"
-alias stfu="osascript -e 'set volume output muted true'" #pure greatness from @nixpulvis
-alias cpu="sudo htop"
+alias thop="sudo htop"
 alias scoop="mv ~/Desktop/* ~/deskdrawer" # scoops everything from my ~/desktop into my ~/deskdrawer
 alias unscoop="mv ~/Deskdrawer/* ~/Desktop" # unscoops everything from the ~/deskdrawer to the ~/desktop (usually temporarily)"
 alias filetree="ls -R | grep ":$" | sed -e 's/:$//' -e 's/[^-][^\/]*\//--/g' -e 's/^/ /' -e 's/-/|/'"
@@ -47,11 +44,6 @@ alias sshccs="ssh markmoss@login.ccs.neu.edu"
 alias sshcoe="ssh mmossber@gateway.coe.neu.edu"
 alias sshsite="ssh -p 2222 markmoss@mark.mn"
 
-#compile
-alias C="gcc -o"
-alias CPP="g++ -o"
-
-#function
 function go(){ # navigates to directory, clears screen
   cd "$1"
   clear
