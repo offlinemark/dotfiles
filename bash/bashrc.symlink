@@ -37,7 +37,7 @@ alias burpoff="sudo networksetup -setwebproxystate Wi-Fi off; sudo networksetup 
 alias netw="networksetup"
 alias apache="sudo apachectl start"
 alias apacheoff="sudo apachectl stop"
-alias restartserved="sudo apachectl restart"
+alias apacherestart="sudo apachectl restart"
 
 #ssh
 alias sshccs="ssh markmoss@login.ccs.neu.edu"

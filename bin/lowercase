@@ -1,0 +1,13 @@
+#!/usr/bin/env python
+
+import os, os.path, sys
+
+dir = sys.argv[1]
+os.chdir(dir);
+
+for thing in os.listdir('.'):
+ 
+	if thing[0] == '.':
+		continue
+	elif os.path.isdir(thing):
+		os.rename(thing, thing.lower())

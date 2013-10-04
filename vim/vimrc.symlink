@@ -17,18 +17,22 @@ execute pathogen#infect()
 
 syntax on
 
+" tabs = 4 spaces, autoindent
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
 set autoindent
+set expandtab
 
 set number
 set ruler
 
+" highlights excess whitespace
 highlight ExtraWhitespace ctermbg=darkgreen guibg=darkgreen
 match ExtraWhitespace /\s\+$/
 
 " thanks @dbotsford!
+" toggles relative line numbers
 function! NumberToggle()
   if(&relativenumber == 1)
     set number
@@ -38,3 +42,10 @@ function! NumberToggle()
 endfunc
 
 nnoremap <C-n> :call NumberToggle()<cr>
+
+" from @thoughtbot, easy split nav
+" http://goo.gl/LcESVi
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
