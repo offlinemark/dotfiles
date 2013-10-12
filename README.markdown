@@ -4,7 +4,7 @@ A bunch of files that basically configure things to how I like them. Many thanks
 for creating the [original setup](https://github.com/holman/dotfiles), from which this repository was forked from.
 Since I don't use zsh, I removed/don't use any of those zsh specific features.
 
-## initial setup
+## core setup
 
 Run this:
 
@@ -16,6 +16,15 @@ cd ~/.dotfiles
 
 This will symlink the appropriate files in `.dotfiles` to your home directory.
 Everything is configured and tweaked within `~/.dotfiles`.
+
+## editors
+
+To set up vim, run ```./vim/vimpluginsetup``` which will install vim plugins as submodules.
+
+To set up Sublime Text 2, run ```./sublime2/setup``` which will back up the current User
+preferences from ```Packages/User``` to ```Packages/User.backup```, symlink 
+```~/.dotfiles/sublime2/User``` to ```Packages/User```, and install the 
+[Flatland](http://github.com/thinkpixellab/flatland) theme.
 
 ## customizing
 
