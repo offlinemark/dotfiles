@@ -27,7 +27,7 @@
 #android
 #export PATH=${PATH}:/Users/mark/code/android/android-sdk-macosx/platform-tools 
 
-export PATH=${PATH}:$HOME/.dotfiles/bin
+export PATH="/usr/local/bin:$HOME/.dotfiles/bin:$PATH"
 
 ### prompt stuff #########################################
 
