@@ -11,7 +11,7 @@
 	editor = /usr/bin/vim
 	excludesfile = /Users/mark/.gitignore
 [alias]
-	s = "status -s"
+	s = "status -sb"
 	st = "status"
 	a = "add"
 	c = "commit"
