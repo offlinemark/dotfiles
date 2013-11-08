@@ -20,11 +20,19 @@ brew update
 brew upgrade
 
 # Install homebrew packages
+
+## basic utilities
 brew install git
 brew install htop
 brew install irssi
-brew install nmap
 brew install tmux
+
+## network tools
+brew install nmap
+brew install netcat
+
+## c tools
+brew install gdb
 brew install valgrind
 
 exit 0
