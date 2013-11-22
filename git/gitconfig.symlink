@@ -1,15 +1,13 @@
 [user]
 	name = Mark Mossberg
 	email = mark.mossberg@gmail.com
-[credential]
-	helper = osxkeychain
 [color]
 	ui = true
 [push]
 	default = simple
 [core]
 	editor = /usr/bin/vim
-	excludesfile = /Users/mark/.gitignore
+	excludesfile = ~/.gitignore
 [alias]
 	s = "status -sb"
 	st = "status"
