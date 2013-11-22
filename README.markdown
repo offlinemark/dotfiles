@@ -4,6 +4,8 @@ A bunch of files that basically configure things to how I like them. Many thanks
 for creating the [original setup](https://github.com/holman/dotfiles), from which this repository was forked from.
 Since I don't use zsh, I removed/don't use any of those zsh specific features.
 
+*Disclaimer: no guarantees that any of this works. if you're actually going to use any of this, please read any scripts you're about to execute just so you're exactly sure what they do, because it's entirely possible to screw up your setup.*
+
 ## core setup
 
 Run this:
