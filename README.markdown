@@ -1,4 +1,4 @@
-# dotfiles
+# dotfiles (ubuntu)
 
 A bunch of files that basically configure things to how I like them. Many thanks to [@holman](https://github.com/holman)
 for creating the [original setup](https://github.com/holman/dotfiles), from which this repository was forked from.
@@ -30,3 +30,9 @@ preferences from ```Packages/User``` to ```Packages/User.backup```, symlink
 
 Any files/directories ending in `.symlink` will get symlinked into `$HOME` as a hidden file/directory without
 the `.symlink` extension. This will occur on the execution of `script/bootstrap`.
+
+
+## differences from osx branch
+
+- in script/bootstrap:
+	- remove automatic gitconfig generation. this means you have to supply your own git/gitconfig.symlink file and it won't get dynamically created.
