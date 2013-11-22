@@ -34,5 +34,13 @@ the `.symlink` extension. This will occur on the execution of `script/bootstrap`
 
 ## differences from osx branch
 
+- delete osx specific stuff
+    - scripts/binaries/symlinks in bin
+    - osx directory
+    - iterm directory
 - in script/bootstrap:
 	- remove automatic gitconfig generation. this means you have to supply your own git/gitconfig.symlink file and it won't get dynamically created.
+
+## misc notes
+
+- to change default text editor: `sudo update-alternatives --config editor`
