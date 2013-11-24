@@ -1,2 +1,0 @@
-As of OS X Mavericks (as far I as I know), gcc has secretly been replaced by clang.
-Use brew to manually install gcc and symlink it in /usr/local/bin
