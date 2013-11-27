@@ -1,0 +1,24 @@
+# set Ctrl-a as the default prefix key combination
+# and unbind C-b to free it up
+set -g prefix C-a
+unbind C-b
+
+# use send-prefix to pass C-a through to application
+bind C-a send-prefix
+
+# set window and pane index to 1 (0 by default)
+set-option -g base-index 1
+setw -g pane-base-index 1
+
+# use PREFIX | to split window horizontally and PREFIX - to split vertically
+bind | split-window -h
+bind - split-window -v
+
+# map Vi movement keys as pane movement keys
+bind h select-pane -L
+bind j select-pane -D
+bind k select-pane -U
+bind l select-pane -R
+
+# scrolling
+set -g mode-mouse on
