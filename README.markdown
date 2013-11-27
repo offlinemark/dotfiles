@@ -46,3 +46,4 @@ the `.symlink` extension. This will occur on the execution of `script/bootstrap`
 ## misc notes
 
 - to change default text editor: `sudo update-alternatives --config editor`
+- to change timezone           : `sudo dpkg-reconfigure tzdata`
