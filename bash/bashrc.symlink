@@ -1,11 +1,12 @@
-# puts current dir in iterm2 tab
-export PROMPT_COMMAND='echo -ne "\033]0;${PWD/#$HOME/~}\007"'
+# Mark Mossberg's bashrc
+# View full dotfiles at:
+# http://github.com/markmossberg/dotfiles
 
 #listing files
-alias l="ls -lG"
-alias lt="ls -ltG"
-alias la="ls -laG"
-alias lr="ls -lRG"
+alias l="ls -l"
+alias lt="ls -lt"
+alias la="ls -la"
+alias lr="ls -lR"
 
 #quickly edit bash profile and bashrc
 alias editprofile="vim ~/.bash_profile"
@@ -22,8 +23,8 @@ alias cdschool="cd ~/northeastern/2_1"
 alias cddot="cd ~/.dotfiles"
 
 #misc
-alias cl="clear; pwd; ls -lG"
-alias mv="mv -v" 
+alias cl="clear; pwd; ls -l"
+alias mv="mv -v"
 alias copy="tr -d \"\\n\" | pbcopy"
 alias clearlogs="sudo rm -v /private/var/log/asl/*.asl"
 alias thop="sudo htop"
