@@ -3,10 +3,10 @@
 # http://github.com/markmossberg/dotfiles
 
 #listing files
-alias l="ls -l"
-alias lt="ls -lt"
-alias la="ls -la"
-alias lr="ls -lR"
+alias l="ls -l --color=auto"
+alias lt="ls -lt --color=auto"
+alias la="ls -la --color=auto"
+alias lr="ls -lR --color=auto"
 
 #quickly edit bash profile and bashrc
 alias editprofile="vim ~/.bash_profile"
