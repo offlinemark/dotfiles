@@ -54,3 +54,6 @@ function go(){ # navigates to directory, clears screen
   pwd
   ls -l
 }
+
+# for <c-s> save in vim
+stty -ixon
