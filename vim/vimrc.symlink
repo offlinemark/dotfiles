@@ -1,18 +1,3 @@
-"
-" @holman dotfiles default
-"
-
-syntax on
-
-" Wrap gitcommit file types at the appropriate length
-filetype indent plugin on
-
-""""""""""""""""""
-
-"
-" mine
-"
-
 execute pathogen#infect()
 
 syntax on
@@ -49,3 +34,10 @@ nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
+
+" Wrap gitcommit file types at the appropriate length
+filetype indent plugin on
+
+" save
+map <C-s> <esc>:w<cr>
+imap <C-s> <esc>:w<cr>
