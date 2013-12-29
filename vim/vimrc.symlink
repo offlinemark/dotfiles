@@ -41,3 +41,6 @@ filetype indent plugin on
 " save
 map <C-s> <esc>:w<cr>
 imap <C-s> <esc>:w<cr>
+
+" easy escape
+inoremap jj <ESC>
