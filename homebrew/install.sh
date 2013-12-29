@@ -26,10 +26,12 @@ brew install git
 brew install htop
 brew install irssi
 brew install tmux
+brew install ssh-copy-id
 
 ## network tools
 brew install nmap
 brew install netcat
+brew install iftop
 
 ## c tools
 brew install gdb
