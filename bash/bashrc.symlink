@@ -42,9 +42,6 @@ alias apachegraceful="sudo apachectl graceful"
 alias apacherestart="sudo apachectl restart"
 
 #ssh
-alias sshccs="ssh markmoss@login.ccs.neu.edu"
-alias sshcoe="ssh mmossber@gateway.coe.neu.edu"
-alias sshsite="ssh -p 2222 markmoss@mark.mn"
 alias sshtunnel="sudo networksetup -setsocksfirewallproxystate Wi-fi on; ssh -D 8080 -C -N markmoss@asterix.ccs.neu.edu"
 alias sshtunneloff="sudo networksetup -setsocksfirewallproxystate Wi-fi off"
 
