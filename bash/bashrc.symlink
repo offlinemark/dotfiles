@@ -2,10 +2,10 @@
 export PROMPT_COMMAND='echo -ne "\033]0;${PWD/#$HOME/~}\007"'
 
 #listing files
-alias l="ls -lG"
-alias lt="ls -ltG"
-alias la="ls -laG"
-alias lr="ls -lRG"
+alias l="ls -lGH"
+alias lt="ls -ltGH"
+alias la="ls -laGH"
+alias lr="ls -lRGH"
 
 #quickly edit bash profile and bashrc
 alias editprofile="vim ~/.bash_profile"
