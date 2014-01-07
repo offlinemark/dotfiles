@@ -44,3 +44,6 @@ imap <C-s> <esc>:w<cr>
 
 " easy escape
 inoremap jj <ESC>
+
+" markdown syntax
+au BufRead,BufNewFile *.md set filetype=markdown
