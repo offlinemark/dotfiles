@@ -17,8 +17,8 @@ alias viewrc="less ~/.bashrc"
 alias cdd="cd ~/Desktop"
 alias cddd="cd ~/Deskdrawer"
 alias ..="pwd; cd ..; pwd; ls -lG"
-alias cdcode="cd ~/code"
-alias cdschool="cd ~/northeastern/2_1"
+alias code="cd ~/code"
+alias school="cd ~/school"
 alias cddot="cd ~/.dotfiles"
 
 #misc
