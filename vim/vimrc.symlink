@@ -1,7 +1,7 @@
 " General
-set nocompatible
 filetype off
 filetype plugin indent on
+set nocompatible
 set number
 set ruler
 syntax on
@@ -27,6 +27,12 @@ set shiftwidth=4
 set softtabstop=4
 set autoindent
 set expandtab
+
+" searching
+set hlsearch
+set incsearch
+set ignorecase
+set smartcase
 
 " highlights excess whitespace
 highlight ExtraWhitespace ctermbg=darkgreen guibg=darkgreen
