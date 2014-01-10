@@ -1,8 +1,10 @@
 # dotfiles
 
-A bunch of files that basically configure things to how I like them. Many thanks to [@holman](https://github.com/holman)
-for creating the [original setup](https://github.com/holman/dotfiles), from which this repository was forked from.
-Since I don't use zsh, I removed/don't use any of those zsh specific features.
+A bunch of files that basically configure things to how I like them. Many thanks
+to [@holman](https://github.com/holman) for creating the
+[original setup](https://github.com/holman/dotfiles), from which this repository
+was forked from. Since I don't use zsh, I removed/don't use any of those zsh
+specific features.
 
 ## core setup
 
@@ -19,17 +21,27 @@ Everything is configured and tweaked within `~/.dotfiles`.
 
 ## editors
 
-To set up vim, run ```./vim/vimpluginsetup``` which will install vim plugins as submodules.
+To set up vim,
 
-To set up Sublime Text 2, run ```./sublime2/setup``` which will back up the current User
-preferences from ```Packages/User``` to ```Packages/User.backup```, symlink
-```~/.dotfiles/sublime2/User``` to ```Packages/User```, and install the
+```
+$ mkdir -p ~/.vim/bundle
+$ git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+$ vim +BundleInstall +qall
+```
+
+which will set up Vundle and
+install all plugins specified in `vim/vimrc.symlink`.
+
+To set up Sublime Text 2, run `./sublime2/setup` which will back up the current
+User preferences from `Packages/User` to `Packages/User.backup`, symlink
+`~/.dotfiles/sublime2/User` to `Packages/User`, and install the
 [Flatland](http://github.com/thinkpixellab/flatland) theme.
 
 ## customizing
 
-Any files/directories ending in `.symlink` will get symlinked into `$HOME` as a hidden file/directory without
-the `.symlink` extension. This will occur on the execution of `script/bootstrap`.
+Any files/directories ending in `.symlink` will get symlinked into `$HOME` as a
+hidden file/directory without the `.symlink` extension. This will occur on the
+execution of `script/bootstrap`.
 
 ## notes
 
@@ -42,22 +54,6 @@ primarily for personal reference
 - Profiles > Keys > Profile Shortcut Keys > ^j : "Select Menu Item 'Select Previous Tab'"
 - Profiles > Keys > Profile Shortcut Keys > ^k : "Select Menu Item 'Select Next Tab'"
 
-### submodules
-
-- to just try something out, git clone it. if you like it, delete the clone and then submodule
-- `git submodule add [link] [path]`
-    - *important*: don't use full path (i.e. starting from / or ~), use relative path
-- to remove a submodule (not exactly sure)
-
-```
-git ls --stage [path to submodule dir]
-git rm --cached [path to submodule dir]
-vim .dotfiles/.git/config # delete relevant lines
-vim .dotfiles/.gitmodules # delete relevant lines
-rm -rf [path to submodule dir]
-```
-- [helpful link](http://chrisjean.com/2009/04/20/git-submodules-adding-using-removing-and-updating/)
-
 ### gcc
 
 As of OS X Mavericks (as far I as I know), gcc has secretly been replaced by clang.
@@ -68,8 +64,10 @@ Use brew to manually install gcc and symlink it in `/usr/local/bin`
 
 ### mamp
 
-If you ever find yourself doing php dev, get [mamp](http://mamp.info). there are a few configs you should make though
+If you ever find yourself doing php dev, get [mamp](http://mamp.info). there are
+a few configs you should make though
 
 - By default, there is caching which prevents instant refreshing
-    - edit `/Applications/MAMP/bin/php/[php version/conf/php.ini` and comment out everything under the "OPcache" section
+    - edit `/Applications/MAMP/bin/php/[php version/conf/php.ini` and comment out
+      everything under the "OPcache" section
 - For error messages, set `display_errors = On` in the same file
