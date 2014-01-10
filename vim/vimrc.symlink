@@ -1,6 +1,25 @@
-execute pathogen#infect()
-
+" General
+set nocompatible
+filetype off
+filetype plugin indent on
+set number
+set ruler
 syntax on
+
+" Vundle
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+Bundle 'gmarik/vundle'
+
+" Vim plugins
+Bundle 'scrooloose/nerdtree'
+Bundle 'scrooloose/syntastic'
+Bundle 'tpope/vim-commentary'
+Bundle 'ervandew/supertab'
+Bundle 'tomtom/tlib_vim'
+Bundle 'MarcWeber/vim-addon-mw-utils'
+Bundle 'garbas/vim-snipmate'
+Bundle 'honza/vim-snippets'
 
 " tabs = 4 spaces, autoindent
 set tabstop=4
@@ -8,9 +27,6 @@ set shiftwidth=4
 set softtabstop=4
 set autoindent
 set expandtab
-
-set number
-set ruler
 
 " highlights excess whitespace
 highlight ExtraWhitespace ctermbg=darkgreen guibg=darkgreen
