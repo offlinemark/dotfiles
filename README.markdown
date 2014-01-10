@@ -25,12 +25,20 @@ Everything is configured and tweaked within `~/.dotfiles`.
 
 ## editors
 
-To set up vim, run `./vim/vimpluginsetup` which will install vim plugins as
-submodules.
+To set up vim,
 
-To set up Sublime Text 2, run ```./sublime2/setup``` which will back up the
-current User preferences from ```Packages/User``` to ```Packages/User.backup```,
-symlink ```~/.dotfiles/sublime2/User``` to ```Packages/User```, and install the
+```
+$ mkdir -p ~/.vim/bundle
+$ git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+$ vim +BundleInstall +qall
+```
+
+which will set up Vundle and
+install all plugins specified in `vim/vimrc.symlink`.
+
+To set up Sublime Text 2, run `./sublime2/setup` which will back up the
+current User preferences from `Packages/User` to `Packages/User.backup`,
+symlink `~/.dotfiles/sublime2/User` to `Packages/User`, and install the
 [Flatland](http://github.com/thinkpixellab/flatland) theme.
 
 ## customizing
