@@ -21,22 +21,22 @@ export EDITOR="/usr/bin/vim"
 ### prompt stuff #########################################
 
 # Colors
-black='\e[0;30m' # Black - Regular
-red='\e[0;31m' # Red
-green='\e[0;32m' # Green
-blue='\e[0;34m' # Blue
-purple='\e[0;35m' # Purple
-cyan='\e[0;36m' # Cyan
-white='\e[0;37m' # White
-bblack='\e[1;30m' # Black - Bold
-bred='\e[1;31m' # Red
-bgreen='\e[1;32m' # Green
-bblue='\e[1;34m' # Blue
-bpurple='\e[1;35m' # Purple
-bcyan='\e[1;36m' # Cyan
-bwhite='\e[1;37m' # White
+black='\[\e[0;30m\]' # Black - Regular
+red='\[\e[0;31m\]' # Red
+green='\[\e[0;32m\]' # Green
+blue='\[\e[0;34m\]' # Blue
+purple='\[\e[0;35m\]' # Purple
+cyan='\[\e[0;36m\]' # Cyan
+white='\[\e[0;37m\]' # White
+bblack='\[\e[1;30m\]' # Black - Bold
+bred='\[\e[1;31m\]' # Red
+bgreen='\[\e[1;32m\]' # Green
+bblue='\[\e[1;34m\]' # Blue
+bpurple='\[\e[1;35m\]' # Purple
+bcyan='\[\e[1;36m\]' # Cyan
+bwhite='\[\e[1;37m\]' # White
 
-reset='\e[0m'    # Text Reset
+reset='\[\e[0m\]'    # Text Reset
 
 #bash prompt
 #export PS1="[\h:\u//\W]{ "
@@ -51,7 +51,8 @@ function parse_git_branch {
    git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/' 
 }
 
-export PS1="\[$bgreen\][\u:\[$bcyan\]\w\[$bgreen\]]\[$bblue\]\$(parse_git_branch)\[$bgreen\]{ \[$reset\]"
+#export PS1="\[$bgreen\][\u:\[$bcyan\]\w\[$bgreen\]]\[$bblue\]\$(parse_git_branch)\[$bgreen\]{ \[$reset\]"
+export PS1="$bgreen[\u:$bcyan\w$bgreen]$bblue\$(parse_git_branch)$bgreen{ $reset"
 export PS2="\[$bgreen\]> \[$reset\]"
 
 export CLICOLOR=1
