@@ -1,0 +1,28 @@
+# make sure homebrew is up to date
+update
+
+# make sure everything is up to date
+upgrade
+
+# Install homebrew packages
+
+## basic utilities
+install git
+install htop
+install irssi
+install tmux
+install ssh-copy-id
+
+## network tools
+install nmap
+install netcat
+install iftop
+install ettercap
+
+## c tools
+install gcc49
+install gdb
+install valgrind
+
+# remove outdated versions from cellar
+cleanup
