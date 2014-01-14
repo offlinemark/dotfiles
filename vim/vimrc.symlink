@@ -4,9 +4,18 @@ filetype plugin indent on
 set nocompatible
 set number
 set ruler
+set foldmethod=indent
+set foldlevel=99
+set colorcolumn=80
+set scrolloff=10
+set noswapfile
 syntax on
+set tabstop=4 shiftwidth=4 softtabstop=4 autoindent expandtab
+set hlsearch incsearch ignorecase smartcase
+" set cursorline
+" set textwidth=80
 
-" Vundle
+" Vundle Setup
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 Bundle 'gmarik/vundle'
@@ -20,19 +29,6 @@ Bundle 'tomtom/tlib_vim'
 Bundle 'MarcWeber/vim-addon-mw-utils'
 Bundle 'garbas/vim-snipmate'
 Bundle 'honza/vim-snippets'
-
-" tabs = 4 spaces, autoindent
-set tabstop=4
-set shiftwidth=4
-set softtabstop=4
-set autoindent
-set expandtab
-
-" searching
-set hlsearch
-set incsearch
-set ignorecase
-set smartcase
 
 " highlights excess whitespace
 highlight ExtraWhitespace ctermbg=darkgreen guibg=darkgreen
@@ -57,12 +53,14 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
-" Wrap gitcommit file types at the appropriate length
-filetype indent plugin on
+" jump 5 lines with C-jk
+noremap <C-b> 5j
+noremap <C-h> 5k
 
-" save
+" save/quit
 map <C-s> <esc>:w<cr>
 imap <C-s> <esc>:w<cr>
+nmap <C-q> <esc>:q<cr>
 
 " easy escape
 inoremap jj <ESC>
