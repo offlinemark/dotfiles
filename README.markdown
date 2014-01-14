@@ -25,15 +25,7 @@ Everything is configured and tweaked within `~/.dotfiles`.
 
 ## editors
 
-To set up vim,
-
-```
-$ mkdir -p ~/.vim/bundle
-$ git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
-$ vim +BundleInstall +qall
-```
-
-which will set up Vundle and
+To set up vim, execute `vim/install.sh` which will set up Vundle and
 install all plugins specified in `vim/vimrc.symlink`.
 
 To set up Sublime Text 2, run `./sublime2/setup` which will back up the
