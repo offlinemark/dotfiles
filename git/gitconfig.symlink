@@ -12,6 +12,7 @@
 	s = "status -sb"
 	st = "status"
 	a = "add"
+	au = "add -u"
 	c = "commit"
 	l = "log"
 	ll = "log --graph --oneline --all --decorate -n 25"
