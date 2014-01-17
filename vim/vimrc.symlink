@@ -30,6 +30,7 @@ Bundle 'tomtom/tlib_vim'
 Bundle 'MarcWeber/vim-addon-mw-utils'
 Bundle 'garbas/vim-snipmate'
 Bundle 'honza/vim-snippets'
+Bundle 'tpope/vim-surround'
 
 " highlights excess whitespace
 highlight ExtraWhitespace ctermbg=darkgreen guibg=darkgreen
@@ -68,7 +69,7 @@ imap <C-s> <esc>:w<cr>
 nmap <C-q> <esc>:q<cr>
 
 " easy escape
-inoremap jj <ESC>
+inoremap jkl <ESC>
 
 " markdown syntax
 au BufRead,BufNewFile *.md set filetype=markdown
