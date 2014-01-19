@@ -24,5 +24,8 @@ install gcc49
 install gdb
 install valgrind
 
+## misc
+install ctags
+
 # remove outdated versions from cellar
 cleanup
