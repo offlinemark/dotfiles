@@ -7,13 +7,13 @@ set ruler
 set foldmethod=indent
 set foldlevel=99
 set colorcolumn=80
-set scrolloff=10
+set scrolloff=9999      " cursor always in middle
 set noswapfile
 syntax on
 set tabstop=4 shiftwidth=4 softtabstop=4 autoindent expandtab
 set hlsearch incsearch ignorecase smartcase
 set mouse=a
-" set cursorline
+set cursorline
 " set textwidth=80
 
 " Vundle Setup
@@ -31,6 +31,7 @@ Bundle 'MarcWeber/vim-addon-mw-utils'
 Bundle 'garbas/vim-snipmate'
 Bundle 'honza/vim-snippets'
 Bundle 'tpope/vim-surround'
+Bundle 'majutsushi/tagbar'
 
 " highlights excess whitespace
 highlight ExtraWhitespace ctermbg=darkgreen guibg=darkgreen
@@ -47,13 +48,6 @@ function! NumberToggle()
 endfunc
 
 nnoremap <C-n> :call NumberToggle()<cr>
-
-" from @thoughtbot, easy split nav
-" http://goo.gl/LcESVi
-nnoremap <C-J> <C-W><C-J>
-nnoremap <C-K> <C-W><C-K>
-nnoremap <C-L> <C-W><C-L>
-nnoremap <C-H> <C-W><C-H>
 
 " jump 5 lines with C-jk
 noremap <C-b> 5j
@@ -73,3 +67,6 @@ inoremap jkl <ESC>
 
 " markdown syntax
 au BufRead,BufNewFile *.md set filetype=markdown
+
+" tagbar
+map <C-a> :TagbarOpenAutoClose<cr>
