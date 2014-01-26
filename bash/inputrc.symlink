@@ -1,0 +1,7 @@
+set completion-ignore-case On
+set editing-mode vi
+
+set keymap vi-insert
+Control-p: history-search-backward
+Control-n: history-search-forward
+"jk": vi-movement-mode
