@@ -12,6 +12,7 @@ install htop
 install irssi
 install tmux
 install ssh-copy-id
+install watch
 
 ## network tools
 install nmap
