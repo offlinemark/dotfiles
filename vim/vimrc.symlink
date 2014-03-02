@@ -63,7 +63,7 @@ imap <C-s> <esc>:w<cr>
 nmap <C-q> <esc>:q<cr>
 
 " easy escape
-inoremap jkl <ESC>
+inoremap jk <ESC>
 
 " markdown syntax
 au BufRead,BufNewFile *.md set filetype=markdown
