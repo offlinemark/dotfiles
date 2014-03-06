@@ -1,7 +1,7 @@
 # env variables
 
 set -g -x PATH /usr/local/bin $PATH ~/.dotfiles/bin/
-set -g -x fish_greeting 'You\'re awesome! :)'
+set -g -x fish_greeting (smile.py)
 set -g -x EDITOR /usr/bin/vim
 
 # aliases
