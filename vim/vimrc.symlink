@@ -1,6 +1,8 @@
 " General
 filetype off
 filetype plugin indent on
+syntax enable
+set shell=/bin/bash     " required when using fish
 set nocompatible
 set number
 set ruler
@@ -9,7 +11,6 @@ set foldlevel=99
 set colorcolumn=80
 set scrolloff=9999      " cursor always in middle
 set noswapfile
-syntax on
 set tabstop=4 shiftwidth=4 softtabstop=4 autoindent expandtab
 set hlsearch incsearch ignorecase smartcase
 set mouse=a
@@ -32,6 +33,7 @@ Bundle 'garbas/vim-snipmate'
 Bundle 'honza/vim-snippets'
 Bundle 'tpope/vim-surround'
 Bundle 'majutsushi/tagbar'
+Bundle 'dag/vim-fish'
 
 " highlights excess whitespace
 highlight ExtraWhitespace ctermbg=darkgreen guibg=darkgreen
@@ -70,3 +72,10 @@ au BufRead,BufNewFile *.md set filetype=markdown
 
 " tagbar
 map <C-a> :TagbarOpenAutoClose<cr>
+
+" fish syntax
+au BufRead,BufNewFile *.fish set filetype=fish
+" autocmd FileType fish compiler fish
+" "autocmd FileType fish setlocal textwidth=79
+" autocmd FileType fish setlocal foldmethod=expr
+

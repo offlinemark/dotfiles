@@ -1,4 +1,9 @@
 sublime2/User/Package\ Control.sublime-settings
 sublime2/User/Package Control.last-run
 ssh
+python/pypirc.symlink
 vim/vim.symlink/bundle
+fish/config.symlink/fish/fish_history
+fish/config.symlink/fish/generated_completions
+fish/config.symlink/fish/fishd*
+fish/config.symlink/gtk*
