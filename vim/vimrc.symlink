@@ -9,6 +9,7 @@ set ruler
 set foldmethod=indent
 set foldlevel=99
 set colorcolumn=80
+highlight ColorColumn ctermbg=7 " light grey color column
 set scrolloff=9999      " cursor always in middle
 set noswapfile
 set tabstop=4 shiftwidth=4 softtabstop=4 autoindent expandtab
