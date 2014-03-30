@@ -24,9 +24,18 @@ install ettercap
 install gcc49
 install gdb
 install valgrind
+install cppcheck
 
 ## misc
 install ctags
 
 # remove outdated versions from cellar
 cleanup
+
+### to check out
+# ack
+# mtr
+# tig
+# tpp
+# ipcalc
+# multitail
