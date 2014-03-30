@@ -12,5 +12,6 @@ print random.choice([
     "Don't worry, be happy",
     "Smile",
     "Keep calm and HACK",
-    "Let's Go"
+    "Let's Go",
+    "Take it easy"
     ]) + '! :)'
