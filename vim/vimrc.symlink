@@ -8,6 +8,7 @@ set number
 set ruler
 set foldmethod=indent
 set foldlevel=99
+set nowrap
 set colorcolumn=80
 highlight ColorColumn ctermbg=7 " light grey color column
 set scrolloff=9999      " cursor always in middle
@@ -17,6 +18,11 @@ set hlsearch incsearch ignorecase smartcase
 set mouse=a
 set cursorline
 " set textwidth=80
+set laststatus=2
+set t_Co=256 " vim-airline stuff
+set encoding=utf-8
+let g:airline_theme="solarized"
+hi Search cterm=NONE ctermfg=white ctermbg=blue
 
 " Vundle Setup
 set rtp+=~/.vim/bundle/vundle/
@@ -35,6 +41,7 @@ Bundle 'honza/vim-snippets'
 Bundle 'tpope/vim-surround'
 Bundle 'majutsushi/tagbar'
 Bundle 'dag/vim-fish'
+Bundle 'bling/vim-airline'
 
 " highlights excess whitespace
 highlight ExtraWhitespace ctermbg=darkgreen guibg=darkgreen
@@ -55,7 +62,6 @@ nnoremap <C-n> :call NumberToggle()<cr>
 " jump 5 lines with C-jk
 noremap <C-b> 5j
 noremap <C-h> 5k
-
 " jump 15 lines without moving cursor
 map <C-f> 15<C-e>
 map <C-g> 15<C-y>
@@ -65,18 +71,15 @@ map <C-s> <esc>:w<cr>
 imap <C-s> <esc>:w<cr>
 nmap <C-q> <esc>:q<cr>
 
-" easy escape
+" easy escape, braces
 inoremap jk <ESC>
+inoremap {{ {<CR><BS>}<Esc>ko
 
-" markdown syntax
-au BufRead,BufNewFile *.md set filetype=markdown
+" syntax
+au BufRead,BufNewFile *.md set filetype=markdown wrap" markdown
+au BufRead,BufNewFile *.fish set filetype=fish " fish
 
 " tagbar
 map <C-a> :TagbarOpenAutoClose<cr>
-
-" fish syntax
-au BufRead,BufNewFile *.fish set filetype=fish
-" autocmd FileType fish compiler fish
-" "autocmd FileType fish setlocal textwidth=79
-" autocmd FileType fish setlocal foldmethod=expr
+map <tab> :NERDTreeToggle<cr>
 
