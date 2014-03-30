@@ -53,7 +53,7 @@ function parse_git_branch {
 
 #export PS1="\[$bgreen\][\u:\[$bcyan\]\w\[$bgreen\]]\[$bblue\]\$(parse_git_branch)\[$bgreen\]{ \[$reset\]"
 # export PS1="$bgreen[\u:$bcyan\w$bgreen]$bblue\$(parse_git_branch)$bgreen{ $reset" # works well with hardcore
-export PS1="$green[\u:$blue\w$green]$bred\$(parse_git_branch)$green{ $reset" # works well with solarized which can't do bold
+export PS1="$green[\u $cyan\h $blue\W$green]$bred\$(parse_git_branch)$green{ $reset" # works well with solarized which can't do bold
 export PS2="\[$bgreen\]> \[$reset\]"
 
 export CLICOLOR=1
