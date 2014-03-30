@@ -1,8 +1,11 @@
 # env variables
 
-set -g -x PATH /usr/local/bin $PATH ~/.dotfiles/bin/
+set -g -x PATH /usr/local/bin /usr/local/sbin $PATH ~/.dotfiles/bin
 set -g -x fish_greeting (smile.py)
 set -g -x EDITOR /usr/bin/vim
+# for vim airline
+# set -g -x LC_ALL en_US.UTF8
+# set -g -x LANG en_US.UTF8
 
 # aliases
 
@@ -41,6 +44,7 @@ alias apache="sudo apachectl start"
 alias apacheoff="sudo apachectl stop"
 alias apachegraceful="sudo apachectl graceful"
 alias apacherestart="sudo apachectl restart"
+alias mysql="/Applications/MAMP/Library/bin/mysql"
 
 ##ssh
 alias sshtunnel="sudo networksetup -setsocksfirewallproxystate Wi-fi on; ssh -D 8080 -C -N markmoss@asterix.ccs.neu.edu"
