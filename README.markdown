@@ -49,10 +49,10 @@ primarily for personal reference
 ### gcc
 
 As of OS X Mavericks (as far I as I know), gcc has secretly been replaced by clang.
-Use brew to manually install gcc and symlink it in `/usr/local/bin`
-
-    ln -sv /usr/local/bin/gcc-4.9 /usr/local/bin/gcc
-    ln -sv /usr/local/bin/g++-4.9 /usr/local/bin/g++
+You can use brew to manually install gcc just to have the original around.
+However, clang is actually pretty dope. It gives you colored output and useful
+error messages and stuff. If you want to use the brew version though, it's
+installed in `/usr/local/bin` as `gcc-4.9` or something.
 
 ### mamp
 
