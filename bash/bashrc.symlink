@@ -32,6 +32,7 @@ alias unscoop="mv ~/Deskdrawer/* ~/Desktop" # unscoops everything from the ~/des
 alias filetree="ls -R | grep ":$" | sed -e 's/:$//' -e 's/[^-][^\/]*\//--/g' -e 's/^/ /' -e 's/-/|/'"
 alias rmd="rm -rf"
 alias public="curl http://canihazip.com/s/; echo ''"
+alias subnet="fing -i | grep IP | head -n 1 | cut -d ' ' -f 9"
 alias burp="sudo networksetup -setwebproxystate Wi-Fi on; sudo networksetup -setsecurewebproxystate Wi-Fi on; burpsuite"
 alias burpoff="sudo networksetup -setwebproxystate Wi-Fi off; sudo networksetup -setsecurewebproxystate Wi-Fi off"
 alias netw="networksetup"
