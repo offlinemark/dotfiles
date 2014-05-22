@@ -73,7 +73,7 @@ nmap <C-q> <esc>:q<cr>
 
 " easy escape, braces
 inoremap jk <ESC>
-inoremap {{ {<CR><BS>}<Esc>ko
+inoremap []\ {<CR><BS>}<Esc>ko
 
 " syntax
 au BufRead,BufNewFile *.md set filetype=markdown wrap" markdown
@@ -83,3 +83,5 @@ au BufRead,BufNewFile *.fish set filetype=fish " fish
 map <C-a> :TagbarOpenAutoClose<cr>
 map <tab> :NERDTreeToggle<cr>
 
+" de-highlight
+map <C-[> :noh<cr>
