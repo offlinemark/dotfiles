@@ -62,3 +62,6 @@ export CLICOLOR=1
 export LSCOLORS=Gxfxcxdxbxegedabagacad
 
 source ~/.bashrc
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"

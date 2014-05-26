@@ -1,6 +1,6 @@
 # env variables
 
-set -g -x PATH /usr/local/bin /usr/local/sbin $PATH ~/.dotfiles/bin
+set -g -x PATH /usr/local/bin /usr/local/sbin $PATH ~/.dotfiles/bin /usr/local/heroku/bin
 set -g -x fish_greeting (smile.py)
 set -g -x EDITOR /usr/bin/vim
 # for vim airline
