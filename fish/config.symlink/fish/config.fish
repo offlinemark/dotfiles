@@ -31,6 +31,7 @@ alias cl="clear; pwd; l"
 alias mv="mv -v"
 alias copy="tr -d \"\\n\" | pbcopy"
 alias clearlogs="sudo rm -v /private/var/log/asl/*.asl"
+alias gerp="grep -rn"
 alias thop="sudo htop"
 # scoops everything from my ~/desktop into my ~/deskdrawer
 alias scoop="mv ~/Desktop/* ~/deskdrawer"
