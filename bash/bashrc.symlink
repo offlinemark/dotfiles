@@ -25,25 +25,12 @@ alias cddot="cd ~/.dotfiles"
 #misc
 alias cl="clear; pwd; ls -l"
 alias mv="mv -v"
-alias copy="tr -d \"\\n\" | pbcopy"
-alias clearlogs="sudo rm -v /private/var/log/asl/*.asl"
 alias thop="sudo htop"
 alias scoop="mv ~/Desktop/* ~/deskdrawer" # scoops everything from my ~/desktop into my ~/deskdrawer
 alias unscoop="mv ~/Deskdrawer/* ~/Desktop" # unscoops everything from the ~/deskdrawer to the ~/desktop (usually temporarily)"
 alias filetree="ls -R | grep ":$" | sed -e 's/:$//' -e 's/[^-][^\/]*\//--/g' -e 's/^/ /' -e 's/-/|/'"
 alias rmd="rm -rf"
 alias public="curl http://canihazip.com/s/; echo ''"
-alias burp="sudo networksetup -setwebproxystate Wi-Fi on; sudo networksetup -setsecurewebproxystate Wi-Fi on; burpsuite"
-alias burpoff="sudo networksetup -setwebproxystate Wi-Fi off; sudo networksetup -setsecurewebproxystate Wi-Fi off"
-alias netw="networksetup"
-alias apache="sudo apachectl start"
-alias apacheoff="sudo apachectl stop"
-alias apachegraceful="sudo apachectl graceful"
-alias apacherestart="sudo apachectl restart"
-
-#ssh
-alias sshtunnel="sudo networksetup -setsocksfirewallproxystate Wi-fi on; ssh -D 8080 -C -N markmoss@asterix.ccs.neu.edu"
-alias sshtunneloff="sudo networksetup -setsocksfirewallproxystate Wi-fi off"
 
 #python
 alias nt="nosetests"
