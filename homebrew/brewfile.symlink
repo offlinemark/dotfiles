@@ -13,6 +13,7 @@ install irssi
 install tmux
 install ssh-copy-id
 install watch
+install binutils
 
 ## network tools
 install nmap
@@ -25,6 +26,9 @@ install gcc49
 install gdb
 install valgrind
 install cppcheck
+
+## security
+radare2
 
 ## misc
 install ctags
