@@ -12,6 +12,7 @@
 	excludesfile = /Users/mark/.gitignore
 [alias]
 	s = "status -sb"
+    d = "diff"
 	st = "status"
 	a = "add"
 	au = "add -u"
