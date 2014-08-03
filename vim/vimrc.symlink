@@ -5,6 +5,8 @@ syntax enable
 set shell=/bin/bash     " required when using fish
 set nocompatible
 set number
+set splitbelow
+set splitright
 set ruler
 set foldmethod=indent
 set foldlevel=99
@@ -23,6 +25,8 @@ set t_Co=256 " vim-airline stuff
 set encoding=utf-8
 let g:airline_theme="solarized"
 hi Search cterm=NONE ctermfg=white ctermbg=blue
+let g:airline_left_sep = '▶'
+let g:airline_right_sep = '◀'
 
 " Vundle Setup
 set rtp+=~/.vim/bundle/vundle/
@@ -38,10 +42,10 @@ Bundle 'tomtom/tlib_vim'
 Bundle 'MarcWeber/vim-addon-mw-utils'
 Bundle 'garbas/vim-snipmate'
 Bundle 'honza/vim-snippets'
-Bundle 'tpope/vim-surround'
 Bundle 'majutsushi/tagbar'
 Bundle 'dag/vim-fish'
 Bundle 'bling/vim-airline'
+Bundle 'sjl/gundo.vim'
 
 " highlights excess whitespace
 highlight ExtraWhitespace ctermbg=darkgreen guibg=darkgreen
@@ -73,7 +77,7 @@ nmap <C-q> <esc>:q<cr>
 
 " easy escape, braces
 inoremap jk <ESC>
-inoremap {{ {<CR><BS>}<Esc>ko
+inoremap []\ {<CR><BS>}<Esc>ko
 
 " syntax
 au BufRead,BufNewFile *.md set filetype=markdown wrap" markdown
@@ -83,3 +87,8 @@ au BufRead,BufNewFile *.fish set filetype=fish " fish
 map <C-a> :TagbarOpenAutoClose<cr>
 map <tab> :NERDTreeToggle<cr>
 
+" gundo
+nnoremap  <C-c> :GundoToggle<cr>
+
+" de-highlight
+map <C-\> :noh<cr>
