@@ -20,5 +20,8 @@ bind j select-pane -D
 bind k select-pane -U
 bind l select-pane -R
 
-# scrolling
+# mouse
 set -g mode-mouse on
+set -g mouse-resize-pane on
+set -g mouse-select-pane on
+set -g mouse-select-window on
