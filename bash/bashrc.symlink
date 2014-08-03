@@ -1,58 +1,13 @@
+source ~/.aliases
+
 # puts current dir in iterm2 tab
 export PROMPT_COMMAND='echo -ne "\033]0;${PWD/#$HOME/~}\007"'
-
-#listing files
-alias l="ls -lGH"
-alias lt="ls -ltGH"
-alias la="ls -laGH"
-alias lr="ls -lRGH"
 
 #quickly edit bash profile and bashrc
 alias editprofile="vim ~/.bash_profile"
 alias editrc="vim ~/.bashrc"
 alias viewprofile="less ~/.bash_profile"
 alias viewrc="less ~/.bashrc"
-
-#moving around
-alias cdd="cd ~/Desktop"
-alias cddd="cd ~/Deskdrawer"
-alias ..="pwd; cd ..; pwd; ls -lG"
-alias code="cd ~/code"
-alias school="cd ~/school"
-alias cddot="cd ~/.dotfiles"
-
-#misc
-alias apache="sudo apachectl start"
-alias apacheoff="sudo apachectl stop"
-alias apachegraceful="sudo apachectl graceful"
-alias apacherestart="sudo apachectl restart"
-alias burp="sudo networksetup -setwebproxystate Wi-Fi on; sudo networksetup -setsecurewebproxystate Wi-Fi on; burpsuite"
-alias burpoff="sudo networksetup -setwebproxystate Wi-Fi off; sudo networksetup -setsecurewebproxystate Wi-Fi off"
-alias cl="clear; pwd; ls -lG"
-alias clearlogs="sudo rm -v /private/var/log/asl/*.asl"
-alias copy="tr -d \"\\n\" | pbcopy"
-alias filetree="ls -R | grep ":$" | sed -e 's/:$//' -e 's/[^-][^\/]*\//--/g' -e 's/^/ /' -e 's/-/|/'"
-alias gerp="grep -rn"
-alias mv="mv -v"
-alias netw="networksetup"
-alias pin="ping 8.8.8.8"
-alias public="curl http://canihazip.com/s/; echo ''"
-alias pyweb="python -m SimpleHTTPServer"
-alias rmd="rm -rf"
-alias scoop="mv ~/Desktop/* ~/deskdrawer" # scoops everything from my ~/desktop into my ~/deskdrawer
-alias subnet="fing -i | grep IP | head -n 1 | cut -d ' ' -f 9"
-alias thop="sudo htop"
-alias unscoop="mv ~/Deskdrawer/* ~/Desktop" # unscoops everything from the ~/deskdrawer to the ~/desktop (usually temporarily)"
-
-#ssh
-alias sshtunnel="sudo networksetup -setsocksfirewallproxystate Wi-fi on; ssh -D 8080 -C -N markmoss@asterix.ccs.neu.edu"
-alias sshtunneloff="sudo networksetup -setsocksfirewallproxystate Wi-fi off"
-
-#python
-alias nt="nosetests"
-alias veinit="virtualenv venv; veon"
-alias veon=". venv/bin/activate"
-alias veoff="deactivate"
 
 function go(){ # navigates to directory, clears screen
   cd "$1"
