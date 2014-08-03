@@ -5,3 +5,4 @@ define rev
 end
 
 set print pretty on
+set print array on
