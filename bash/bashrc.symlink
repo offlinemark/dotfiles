@@ -1,42 +1,10 @@
-# Mark Mossberg's bashrc
-# View full dotfiles at:
-# http://github.com/markmossberg/dotfiles
-
-#listing files
-alias l="ls -l --color=auto"
-alias lt="ls -lt --color=auto"
-alias la="ls -la --color=auto"
-alias lr="ls -lR --color=auto"
+source ~/.aliases
 
 #quickly edit bash profile and bashrc
 alias editprofile="vim ~/.bash_profile"
 alias editrc="vim ~/.bashrc"
 alias viewprofile="less ~/.bash_profile"
 alias viewrc="less ~/.bashrc"
-
-#moving around
-alias cdd="cd ~/Desktop"
-alias cddd="cd ~/Deskdrawer"
-alias ..="pwd; cd ..; pwd; ls -lG"
-alias cdcode="cd ~/code"
-alias cdschool="cd ~/northeastern/2_1"
-alias cddot="cd ~/.dotfiles"
-
-#misc
-alias cl="clear; pwd; ls -l"
-alias mv="mv -v"
-alias thop="sudo htop"
-alias scoop="mv ~/Desktop/* ~/deskdrawer" # scoops everything from my ~/desktop into my ~/deskdrawer
-alias unscoop="mv ~/Deskdrawer/* ~/Desktop" # unscoops everything from the ~/deskdrawer to the ~/desktop (usually temporarily)"
-alias filetree="ls -R | grep ":$" | sed -e 's/:$//' -e 's/[^-][^\/]*\//--/g' -e 's/^/ /' -e 's/-/|/'"
-alias rmd="rm -rf"
-alias public="curl http://canihazip.com/s/; echo ''"
-
-#python
-alias nt="nosetests"
-alias veinit="virtualenv venv; veon"
-alias veon=". venv/bin/activate"
-alias veoff="deactivate"
 
 function go(){ # navigates to directory, clears screen
   cd "$1"
