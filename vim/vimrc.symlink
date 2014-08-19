@@ -84,7 +84,7 @@ au BufRead,BufNewFile *.md set filetype=markdown wrap" markdown
 au BufRead,BufNewFile *.fish set filetype=fish " fish
 
 " tagbar
-map <C-a> :TagbarOpenAutoClose<cr>
+map <C-x> :TagbarOpenAutoClose<cr>
 map <tab> :NERDTreeToggle<cr>
 
 " gundo
