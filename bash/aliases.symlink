@@ -1,10 +1,10 @@
 # aliases
 
 ##listing files
-alias l="ls -lGH"
-alias lt="ls -ltGH"
-alias la="ls -laGH"
-alias lr="ls -lRGH"
+alias l="ls -lH --color=auto"
+alias lt="ls -ltH --color=auto"
+alias la="ls -laH --color=auto"
+alias lr="ls -lRH --color=auto"
 
 ##moving around
 alias cdd="cd ~/Desktop"
