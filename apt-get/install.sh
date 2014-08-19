@@ -40,6 +40,8 @@ info "apt-get install htop"
 sudo apt-get install htop
 info "apt-get install irssi"
 sudo apt-get install irssi
+info "apt-get install ctags"
+sudo apt-get install ctags
 
 ## network tools
 info "apt-get install nmap"
