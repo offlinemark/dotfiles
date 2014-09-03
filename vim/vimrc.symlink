@@ -1,3 +1,4 @@
+let mapleader = "\<Space>"
 " General
 filetype off
 filetype plugin indent on
@@ -61,7 +62,7 @@ function! NumberToggle()
   endif
 endfunc
 
-nnoremap <C-n> :call NumberToggle()<cr>
+nnoremap <leader>n :call NumberToggle()<cr>
 
 " jump 5 lines with C-jk
 noremap <C-b> 5j
@@ -81,14 +82,21 @@ inoremap []\ {<CR><BS>}<Esc>ko
 
 " syntax
 au BufRead,BufNewFile *.md set filetype=markdown wrap" markdown
-au BufRead,BufNewFile *.fish set filetype=fish " fish
+au BufRead,BufNewFile *.fish set filetype=fish
 
 " tagbar
-map <C-a> :TagbarOpenAutoClose<cr>
+map <leader>x :TagbarOpenAutoClose<cr>
+map <leader>X :TagbarToggle<cr>
 map <tab> :NERDTreeToggle<cr>
 
+map <leader>e :lnext<cr>
+map <leader>r :lprev<cr>
+
 " gundo
-nnoremap  <C-c> :GundoToggle<cr>
+nnoremap  <leader>c :GundoToggle<cr>
 
 " de-highlight
-map <C-\> :noh<cr>
+map <leader>\ :noh<cr>
+
+" leader
+" let mapleader = "\<Space>"
