@@ -4,7 +4,7 @@ import random
 
 print random.choice([
     "You're awesome",
-    "You're incredble",
+    "You're incredible",
     "Have a great day",
     "Show em how it's done",
     "Shoot for the moon",
