@@ -98,5 +98,6 @@ nnoremap  <leader>c :GundoToggle<cr>
 " de-highlight
 map <leader>\ :noh<cr>
 
-" leader
-" let mapleader = "\<Space>"
+" paste
+nnoremap <leader>p :set paste<cr>i
+nnoremap <leader>P :set nopaste<cr>
