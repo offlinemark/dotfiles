@@ -5,6 +5,18 @@
 # This installs some of the common dependencies needed (or at least desired)
 # using apt-get
 
+echo -n "DO YOU HAVE SUDO? Y/N: "
+read -n 1 ans
+echo
+
+if [ $ans != "y" ]
+then
+    echo exiting
+    exit
+fi
+
+echo continuing...
+
 info () {
   printf "  [ \033[00;34m..\033[0m ] $1"
 }
