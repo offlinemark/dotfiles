@@ -30,15 +30,15 @@ function fish_prompt --description "Write out Marks' custom prompt"
       set -g __fish_prompt_cwd (set_color $fish_color_cwd)
     end
 
-    echo -n -s $__fish_prompt_cwd [ $USER ' '
+    echo -n -s $__fish_prompt_cwd $USER ' '
     set_color cyan
     echo -n -s $__fish_prompt_hostname ' '
     set_color blue
     prompt_pwd | tr -d '\n'
-    echo -n -s $__fish_prompt_cwd ]
+    echo -n -s $__fish_prompt_cwd
     set_color red
-    __fish_git_prompt | tr -d ' '
-    echo -s $__fish_prompt_cwd '{ ' $__fish_prompt_normal
+    __fish_git_prompt
+    echo -s $__fish_prompt_cwd ' ❯ ' $__fish_prompt_normal
 
   end
 end
