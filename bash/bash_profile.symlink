@@ -30,13 +30,13 @@ reset='\[\e[0m\]'    # Text Reset
 #PS1='\[\e[1;32m\][\u@\h \W]\$\[\e[0m\] '
 
 # megatron
-function parse_git_branch { 
+function parse_git_branch {
    git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/' 
 }
 
 #export PS1="\[$bgreen\][\u:\[$bcyan\]\w\[$bgreen\]]\[$bblue\]\$(parse_git_branch)\[$bgreen\]{ \[$reset\]"
 # export PS1="$bgreen[\u:$bcyan\w$bgreen]$bblue\$(parse_git_branch)$bgreen{ $reset" # works well with hardcore
-export PS1="$green[\u $cyan\h $blue\W$green]$bred\$(parse_git_branch)$green{ $reset" # works well with solarized which can't do bold
+export PS1="$green\u $cyan\h $blue\W$green$bred\$(parse_git_branch)$green ❯ $reset" # works well with solarized which can't do bold
 export PS2="\[$bgreen\]> \[$reset\]"
 
 export CLICOLOR=1

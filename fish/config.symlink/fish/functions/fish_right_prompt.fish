@@ -1,9 +1,7 @@
 function fish_right_prompt
-    # date "+%m/%d/%y %r"
     set_color $fish_color_cwd
-    echo -n "}["
+    echo -n "❮"
     set_color blue
-    date "+%r"
+    date "+ %m/%d %I:%M"
     set_color $fish_color_cwd
-    echo "]"
 end
