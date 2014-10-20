@@ -101,3 +101,6 @@ map <leader>\ :noh<cr>
 " paste
 nnoremap <leader>p :set paste<cr>i
 nnoremap <leader>P :set nopaste<cr>
+
+" delete whitespace at EOL
+nnoremap <leader>o <esc>A<bs><esc>

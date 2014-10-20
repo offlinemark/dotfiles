@@ -46,6 +46,7 @@ alias subnet="fing -i | grep IP | head -n 1 | cut -d ' ' -f 9"
 alias thop="sudo htop"
 # unscoops everything from the ~/deskdrawer to the ~/desktop (usually temporarily)"
 alias unscoop="mv ~/Deskdrawer/* ~/Desktop"
+alias v="vagrant"
 
 ##ssh
 alias sshtunnel="sudo networksetup -setsocksfirewallproxystate Wi-fi on; ssh -D 8080 -C -N markmoss@asterix.ccs.neu.edu"
