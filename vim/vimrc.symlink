@@ -101,3 +101,27 @@ map <leader>\ :noh<cr>
 " paste
 nnoremap <leader>p :set paste<cr>i
 nnoremap <leader>P :set nopaste<cr>
+
+" delete whitespace at EOL
+nnoremap <leader>o <esc>A<bs><esc>
+
+" toggle scrolloff
+function! ScrollOffToggle()
+  if(&scrolloff == 9999)
+    set scrolloff=5
+  else
+    set scrolloff=9999
+  endif
+endfunc
+
+nnoremap <leader>s :call ScrollOffToggle()<cr>
+
+"wrap
+function! WrapToggle()
+  if(&wrap == 1)
+    set nowrap
+  else
+    set wrap
+  endif
+endfunc
+nnoremap <leader>w :call WrapToggle()<cr>
