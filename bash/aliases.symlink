@@ -51,6 +51,8 @@ alias sshtunnel="sudo networksetup -setsocksfirewallproxystate Wi-fi on; ssh -D 
 alias sshtunneloff="sudo networksetup -setsocksfirewallproxystate Wi-fi off"
 
 ##python
+alias py="python"
+alias ipy="ipython"
 alias nt="nosetests"
 alias veinit="virtualenv venv; veon"
 alias veon=". venv/bin/activate.fish"
