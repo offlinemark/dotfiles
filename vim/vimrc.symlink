@@ -19,6 +19,7 @@ set noswapfile
 set tabstop=4 shiftwidth=4 softtabstop=4 autoindent expandtab
 set hlsearch incsearch ignorecase smartcase
 set mouse=a
+set tags=tags;/
 set cursorline
 " set textwidth=80
 set laststatus=2
@@ -28,6 +29,7 @@ let g:airline_theme="solarized"
 hi Search cterm=NONE ctermfg=white ctermbg=blue
 let g:airline_left_sep = '▶'
 let g:airline_right_sep = '◀'
+let NERDTreeQuitOnOpen=1
 
 " Vundle Setup
 set rtp+=~/.vim/bundle/vundle/
@@ -47,6 +49,7 @@ Bundle 'majutsushi/tagbar'
 Bundle 'dag/vim-fish'
 Bundle 'bling/vim-airline'
 Bundle 'sjl/gundo.vim'
+Bundle 'kien/ctrlp.vim'
 
 " highlights excess whitespace
 highlight ExtraWhitespace ctermbg=darkgreen guibg=darkgreen
@@ -71,6 +74,8 @@ noremap <C-h> 5k
 map <C-f> 15<C-e>
 map <C-g> 15<C-y>
 
+map <C-a> A
+
 " save/quit
 map <C-s> <esc>:w<cr>
 imap <C-s> <esc>:w<cr>
@@ -78,10 +83,13 @@ nmap <C-q> <esc>:q<cr>
 
 " easy escape, braces
 inoremap jk <ESC>
-inoremap []\ {<CR><BS>}<Esc>ko
+inoremap ;l <CR>
+inoremap kk -
+" inoremap []\ {<CR><BS>}<Esc>ko
+inoremap []\ {<CR>}<Esc>ko
 
 " syntax
-au BufRead,BufNewFile *.md set filetype=markdown wrap" markdown
+au BufRead,BufNewFile *.md set filetype=markdown wrap spell syntax=off" markdown
 au BufRead,BufNewFile *.fish set filetype=fish
 
 " tagbar
@@ -125,3 +133,17 @@ function! WrapToggle()
   endif
 endfunc
 nnoremap <leader>w :call WrapToggle()<cr>
+
+"
+" don't look below this
+"
+
+" emacs key bindings
+imap <C-b> <Left>
+imap <C-f> <Right>
+imap <C-n> <Down>
+imap <C-p> <Up>
+imap <C-e> <End>
+imap <C-a> <Home>
+imap <C-d> <Del>
+imap <C-h> <BS>
