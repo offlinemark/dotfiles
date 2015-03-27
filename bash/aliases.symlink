@@ -1,7 +1,9 @@
 # aliases
 
+
 ##listing files
 alias l="ls -lGH"
+alias ll="ls -1"
 alias lt="ls -ltGH"
 alias la="ls -laGH"
 alias lr="ls -lRGH"
@@ -18,6 +20,7 @@ alias gd="git diff"
 alias gl="git log"
 alias gll="git log --graph --oneline --all --decorate -n 25"
 alias glll="git log --graph --oneline --all --decorate"
+alias gf="git ls-tree HEAD --full-tree -r"
 
 ##moving around
 alias cdd="cd ~/Desktop"
@@ -28,17 +31,23 @@ alias school="cd ~/school"
 alias cddot="cd ~/.dotfiles"
 
 ##misc
+alias ]="less" # because I pipe to less all the time
 alias ash="adb shell"
 alias burp="sudo networksetup -setwebproxystate Wi-Fi on; sudo networksetup -setsecurewebproxystate Wi-Fi on; burpsuite"
 alias burpoff="sudo networksetup -setwebproxystate Wi-Fi off; sudo networksetup -setsecurewebproxystate Wi-Fi off"
 alias cl="clear; pwd; l"
 alias copy="tr -d \"\\n\" | pbcopy"
+alias grep="ggrep"
 alias gerp="grep -rn"
-alias mv="mv -v"
+alias grip="grep -i"
+alias ip="ifconfig en0 | grep inet\  | awk '{print \$2}'"
+alias ipp="ifconfig en0 | grep inet\  | awk '{print \$2, \$4}'"
 alias mysql="/Applications/MAMP/Library/bin/mysql"
 alias pin="ping 8.8.8.8"
+alias psg="ps -fe | grep"
 alias public="curl http://canihazip.com/s/; echo ''"
 alias pyweb="python -m SimpleHTTPServer"
+alias pycc="python -m py_compile"
 alias rmd="rm -rf"
 # scoops everything from my ~/desktop into my ~/deskdrawer
 alias scoop="mv ~/Desktop/* ~/deskdrawer"
@@ -59,3 +68,4 @@ alias nt="nosetests"
 alias veinit="virtualenv venv; veon"
 alias veon=". venv/bin/activate.fish"
 alias veoff="deactivate"
+

@@ -85,6 +85,7 @@ nmap <C-q> <esc>:q<cr>
 inoremap jk <ESC>
 inoremap ;l <CR>
 inoremap kk -
+inoremap jj _
 " inoremap []\ {<CR><BS>}<Esc>ko
 inoremap []\ {<CR>}<Esc>ko
 
