@@ -18,3 +18,5 @@ function go(){ # navigates to directory, clears screen
 
 # for <c-s> save in vim
 stty -ixon
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting

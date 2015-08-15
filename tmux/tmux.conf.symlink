@@ -3,6 +3,7 @@
 set -g prefix C-a
 unbind C-b
 
+
 # use send-prefix to pass C-a through to application
 bind C-a send-prefix
 
@@ -10,9 +11,12 @@ bind C-a send-prefix
 set-option -g base-index 1
 setw -g pane-base-index 1
 
+# retain directory
+bind c new-window -c "#{pane_current_path}"
+
 # use PREFIX | to split window horizontally and PREFIX - to split vertically
-bind | split-window -h
-bind - split-window -v
+bind | split-window -h -c "#{pane_current_path}"
+bind - split-window -v -c "#{pane_current_path}"
 
 # map Vi movement keys as pane movement keys
 bind h select-pane -L
