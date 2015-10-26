@@ -1,3 +1,5 @@
+source ~/.vimrc.local
+
 let mapleader = "\<Space>"
 " General
 filetype off
@@ -40,6 +42,7 @@ Bundle 'gmarik/vundle'
 Bundle 'scrooloose/nerdtree'
 Bundle 'scrooloose/syntastic'
 Bundle 'tpope/vim-commentary'
+Bundle 'tpope/vim-dispatch'
 Bundle 'ervandew/supertab'
 Bundle 'tomtom/tlib_vim'
 Bundle 'MarcWeber/vim-addon-mw-utils'
@@ -110,6 +113,12 @@ nnoremap  <leader>c :GundoToggle<cr>
 
 " de-highlight
 map <leader>\ :noh<cr>
+
+" vim-dispatch Make
+map <leader>m :Make<cr>
+
+" quick bash
+map <leader>j :sh<cr>
 
 " paste
 nnoremap <leader>p :set paste<cr>i

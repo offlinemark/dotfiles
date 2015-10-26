@@ -1,0 +1,97 @@
+" General
+filetype off
+filetype plugin indent on
+syntax enable
+set shell=/bin/bash     " required when using fish
+set nocompatible
+set number
+set splitbelow
+set splitright
+set ruler
+set foldmethod=indent
+set foldlevel=99
+set nowrap
+set colorcolumn=80
+highlight ColorColumn ctermbg=7 " light grey color column
+set scrolloff=9999      " cursor always in middle
+set noswapfile
+set tabstop=4 shiftwidth=4 softtabstop=4 autoindent expandtab
+set hlsearch incsearch ignorecase smartcase
+set mouse=a
+set cursorline
+" set textwidth=80
+set laststatus=2
+set t_Co=256 " vim-airline stuff
+set encoding=utf-8
+let g:airline_theme="solarized"
+hi Search cterm=NONE ctermfg=white ctermbg=blue
+let g:airline_left_sep = '▶'
+let g:airline_right_sep = '◀'
+
+" Vundle Setup
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+Bundle 'gmarik/vundle'
+
+" Vim plugins
+Bundle 'scrooloose/nerdtree'
+Bundle 'scrooloose/syntastic'
+Bundle 'tpope/vim-commentary'
+Bundle 'ervandew/supertab'
+Bundle 'tomtom/tlib_vim'
+Bundle 'MarcWeber/vim-addon-mw-utils'
+Bundle 'garbas/vim-snipmate'
+Bundle 'honza/vim-snippets'
+Bundle 'majutsushi/tagbar'
+Bundle 'dag/vim-fish'
+Bundle 'bling/vim-airline'
+Bundle 'sjl/gundo.vim'
+
+" highlights excess whitespace
+highlight ExtraWhitespace ctermbg=darkgreen guibg=darkgreen
+match ExtraWhitespace /\s\+$/
+
+" thanks @dbotsford!
+" toggles relative line numbers
+function! NumberToggle()
+  if(&relativenumber == 1)
+    set number
+  else
+    set relativenumber
+  endif
+endfunc
+
+nnoremap <C-n> :call NumberToggle()<cr>
+
+" jump 5 lines with C-jk
+noremap <C-b> 5j
+noremap <C-h> 5k
+" jump 15 lines without moving cursor
+map <C-f> 15<C-e>
+map <C-g> 15<C-y>
+
+" save/quit
+map <C-s> <esc>:w<cr>
+imap <C-s> <esc>:w<cr>
+nmap <C-q> <esc>:q<cr>
+
+" easy escape, braces
+inoremap jk <ESC>
+inoremap {{ {<CR><BS>}<Esc>ko
+
+" syntax
+au BufRead,BufNewFile *.md set filetype=markdown wrap" markdown
+au BufRead,BufNewFile *.fish set filetype=fish " fish
+
+" tagbar
+map <C-a> :TagbarOpenAutoClose<cr>
+map <tab> :NERDTreeToggle<cr>
+
+<<<<<<< HEAD
+=======
+" gundo
+nnoremap  <C-c> :GundoToggle<cr>
+
+" de-highlight
+map <C-\> :noh<cr>
+>>>>>>> 877e875... Update vimrc
