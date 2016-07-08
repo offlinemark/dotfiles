@@ -30,9 +30,9 @@ let g:airline_left_sep = '▶'
 let g:airline_right_sep = '◀'
 
 " Vundle Setup
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-Bundle 'gmarik/vundle'
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Bundle 'Vundle/Vundle.vim'
 
 " Vim plugins
 Bundle 'scrooloose/nerdtree'
@@ -47,6 +47,9 @@ Bundle 'majutsushi/tagbar'
 Bundle 'dag/vim-fish'
 Bundle 'bling/vim-airline'
 Bundle 'sjl/gundo.vim'
+Bundle 'rking/ag.vim'
+
+call vundle#end()
 
 " highlights excess whitespace
 highlight ExtraWhitespace ctermbg=darkgreen guibg=darkgreen
