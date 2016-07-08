@@ -1,4 +1,4 @@
-export PATH="/usr/local/bin:/usr/local/sbin:$HOME/.dotfiles/bin:$PATH"
+export PATH="/usr/local/bin:/usr/local/sbin:$HOME/dotfiles/bin:$PATH"
 export EDITOR="/usr/bin/vim"
 
 ### prompt stuff #########################################
@@ -46,3 +46,4 @@ export LSCOLORS=Gxfxcxdxbxegedabagacad
 
 source ~/.bashrc
 source ~/.bashrc.local
+

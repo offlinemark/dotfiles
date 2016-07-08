@@ -1,4 +1,5 @@
 # aliases
+alias xx="tmux"
 
 ##listing files
 alias l="ls -lH --color=auto"
