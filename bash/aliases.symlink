@@ -1,5 +1,6 @@
 # aliases
 
+alias xx="tmux"
 
 ##listing files
 alias l="ls -lGH"
@@ -17,10 +18,17 @@ alias gb="git branch"
 alias gc="git commit"
 alias gco="git checkout"
 alias gd="git diff"
+alias gdd="git diff --staged"
 alias gl="git log"
 alias gll="git log --graph --oneline --all --decorate -n 25"
 alias glll="git log --graph --oneline --all --decorate"
 alias gf="git ls-tree HEAD --full-tree -r"
+alias gpl="git pull"
+alias gps="git push"
+alias gpus="git push origin"
+alias gpul="git pull origin"
+alias gpom="git push origin master"
+alias gpum="git pull origin master"
 
 ##moving around
 alias cdd="cd ~/Desktop"
@@ -34,9 +42,10 @@ alias cddot="cd ~/.dotfiles"
 alias ]="less" # because I pipe to less all the time
 alias ash="adb shell"
 alias burp="sudo networksetup -setwebproxystate Wi-Fi on; sudo networksetup -setsecurewebproxystate Wi-Fi on; burpsuite"
+alias burp="sudo networksetup -setwebproxystate Wi-Fi on; sudo networksetup -setsecurewebproxystate Wi-Fi on"
 alias burpoff="sudo networksetup -setwebproxystate Wi-Fi off; sudo networksetup -setsecurewebproxystate Wi-Fi off"
 alias cg="cargo"
-alias cl="clear; pwd; l"
+alias cl="clear"
 alias copy="tr -d \"\\n\" | pbcopy"
 alias grep="ggrep"
 alias gerp="grep -rn"
@@ -44,7 +53,7 @@ alias grip="grep -i"
 alias ip="ifconfig en0 | grep inet\  | awk '{print \$2}'"
 alias ipp="ifconfig en0 | grep inet\  | awk '{print \$2, \$4}'"
 alias m="make"
-alias mysql="/Applications/MAMP/Library/bin/mysql"
+#alias mysql="/Applications/MAMP/Library/bin/mysql"
 alias pin="ping 8.8.8.8"
 alias psg="ps -fe | grep"
 alias public="curl http://canihazip.com/s/; echo ''"
@@ -59,9 +68,12 @@ alias thop="sudo htop"
 # unscoops everything from the ~/deskdrawer to the ~/desktop (usually temporarily)"
 alias unscoop="mv ~/Deskdrawer/* ~/Desktop"
 alias v="vagrant"
+alias nesemu="wine /Users/mark/code/sec/ctf/tools/fceux-2.2.2-win32/fceux.exe"
+alias idaq="wine '/Users/mark/.wine/drive_c/Program Files/IDA 6.6/idaq.exe'"
+alias idaq64="wine '/Users/mark/.wine/drive_c/Program Files/IDA 6.6/idaq64.exe'"
 
 ##ssh
-alias sshtunnel="sudo networksetup -setsocksfirewallproxystate Wi-fi on; ssh -D 8080 -C -N markmoss@asterix.ccs.neu.edu"
+alias sshtunnel="sudo networksetup -setsocksfirewallproxystate Wi-fi on; ssh -D 8080 -C -N hax"
 alias sshtunneloff="sudo networksetup -setsocksfirewallproxystate Wi-fi off"
 
 ##python
