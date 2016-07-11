@@ -54,6 +54,7 @@ Bundle 'bling/vim-airline'
 Bundle 'sjl/gundo.vim'
 Bundle 'kien/ctrlp.vim'
 Bundle 'rust-lang/rust.vim'
+Bundle 'rking/ag.vim'
 
 " highlights excess whitespace
 highlight ExtraWhitespace ctermbg=darkgreen guibg=darkgreen
@@ -119,6 +120,12 @@ map <leader>m :Make<cr>
 
 " quick bash
 map <leader>j :sh<cr>
+
+" quick hl
+nmap <leader>8 *N
+
+" quick ag
+nmap <leader>a :Ag<cr>
 
 " paste
 nnoremap <leader>p :set paste<cr>i
